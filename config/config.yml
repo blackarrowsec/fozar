@@ -1,0 +1,33 @@
+rules:
+    - '[pP][aA][sS][sS][wW][oO][rR][dD]\s*=\s*"'
+    - '"access_token":'
+    - '[pP][aA][sS][sS]\s+=\s+?"'
+    - 'ssh [a-zA-Z0-9_-]+@'
+    - '\$[0-9a-z]{1,2}\$[a-zA-Z0-9/\.\$]{10,}' # Unix hashed password
+    - '\-u\s+[a-zA-Z0-9_-]{5,}:[a-zA-Z0-9@!\.\-_%]{5,}\s' # Curl credentials
+    - 'AKIA[0-9A-Z]{16}' # AWS Client ID
+    - '-----BEGIN \w* PRIVATE KEY----' # Private Key
+    - '([\w]{1,24})(://)([^$<]{1})([^\s";]{1,}):([^$<]{1})([^\s";]{1,})@[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,24}([^\s]+)'  
+    - '[pP][aA][sS][sS][wW][oO][rR][dD]\s?:\s?"'
+    - 'ENC\(' # Jasypt password
+
+avoid: 
+    - '.jar'
+    - '.war'
+    - '.rar'
+    - '.zip'
+    - '.class'
+    - '.gz'
+    - '.pkb'
+    - '.ear'
+    - '.swf'
+    - '.jpg'
+    - 'package-lock.json'
+    - '.exe'
+    - '.dat'
+    - '.pak'
+    - '.sdf'
+
+
+# If you want to try some regex before adding it you can use this tool :)
+#               https://regex-golang.appspot.com/assets/html/index.html

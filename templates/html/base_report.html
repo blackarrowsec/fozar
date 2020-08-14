@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/base_report.css">
+	<link rel="stylesheet" type="text/css" href="css/print_report.css">
+	<script src="js/base_report.js"></script>
+	<title>{{.PageTitle}}</title>
+</head>
+<body>
+	<nav id="top-nav">
+		<button id="theme-button" onclick="changeTheme('theme-button')" value="Light Mode"></button>
+		<h1>{{.PageTitle}}</h1>
+	</nav>
+	<div id="data">
+		{{ range .Repo }}
+			{{ template "repo" . }}
+		{{end}}
+	</div>
+</body>
+</html>

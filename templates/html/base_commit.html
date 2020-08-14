@@ -1,0 +1,15 @@
+{{ define "commit" }}
+<div class="commit_body">
+	<div class="commit_header">
+		<section class="file_name">{{.FileName}}</section>
+		<section class="commit_id">{{.CommitId}}</section>
+		<section class="rule">{{.MatchedRule}}</section>
+	</div>
+	<pre> 
+		{{ range .MatchedData}}
+			{{. -}}
+		{{ end }}
+	</pre>
+
+</div>
+{{ end }}

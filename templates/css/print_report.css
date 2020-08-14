@@ -1,0 +1,96 @@
+@media print {
+	{
+		margin-top: 3em;
+	}
+	body {
+		background-color: var(--main-bg-color);
+		font-family: "Gilmer",sans-serif;
+		overflow: auto;
+		color: var(--main-text-color);
+	}
+	#theme-button {
+		display: none;
+	}
+	#top-nav {
+		background-color: var(--nav-bg-color);
+		position: absolute;
+		width: 100%;
+		padding: 1em;
+		top: 0;
+		left: 0;
+		text-align: center;
+		display: block;
+	}
+	#top-nav h1 {
+		color: var(--main-bg-color);
+		padding: 1em;
+		margin: 0px;
+		font-size: 2em;
+	}
+	#data {
+		margin-left: 1px;
+		margin-right: 1px;
+		margin-top: 2.5em;
+		display: block;
+		overflow: auto;
+	}
+	.repo {
+		border-bottom: solid 0.25em var(--accent-color);
+		margin-top: 20px;
+		page-break-before: always;
+	}
+	.repo .repo_title {
+		margin-left: 1em;
+		font-size: 1.5em;
+		color: var(--accent-color);
+	}
+	.repo .repo_path {
+		color: var(--nav-bg-color);
+		margin-bottom: 2em;
+		margin-right: 1em;
+		padding: auto;
+		bottom: 0px;
+		vertical-align: middle;
+	}
+	.commit_body {
+		border-left: 0.5em outset var(--accent-color);
+		border-radius: 3px;
+		margin: 15px;
+		background-color: var(--element-bg-color);
+		padding: 1em;
+		page-break-inside: avoid;
+	}
+	.commit_body textarea {
+		font-family: Consolas, monaco, monospace;
+		font-size: 0.8em;
+		background-color: var(--element-bg-color);
+		width: 100%;
+		min-height: 60px;
+		height: auto;
+		border: none;
+		border-radius: 3px;
+		padding: 2px;
+	}
+	.commit_body .commit_header {
+		margin-bottom: 0.5em;
+	}
+	.commit_body .commit_header .file_name {
+		font-weight: bold;
+		text-align: left;
+		margin-right: 2em;
+	}
+	.commit_body .commit_header .commit_id {
+		font-weight: lighter;
+		text-align: left;
+	}
+	.commit_body .commit_header .rule {
+		color: var(--accent-color);
+		background-color: var(--main-bg-color);
+		padding: 0.5em;
+		margin: 0.5em;
+		border-radius: 0.25em;
+		text-align: right;
+		float:right;
+		width: auto;
+	}
+}

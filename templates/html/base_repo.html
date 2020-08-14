@@ -1,0 +1,9 @@
+{{ define "repo" }}
+<div class="repo">
+			<h3 class="repo_title">{{ .RepoName }}</h3>
+			<h4 class="repo_path">{{ .RepoPath }}</h4>
+			{{ range .Matches}}
+				{{ template "commit" . }}
+			{{end}}
+</div>
+{{ end }}
