@@ -65,7 +65,7 @@ avoid:
 ```
 ### Output Modes
 
-#### HTLM report
+#### HTML report
 
 The HTML report generates an **easy on the eye** output on HTML format. When selecting this output it is necessary to have the `templates/` folder on the same directory from which **Fozar** is being run.
 
